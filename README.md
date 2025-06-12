@@ -1,5 +1,5 @@
 
-# 🧱 Challenge Hexagonal API (Spring Boot + Docker)
+# 🧱 Challenge Hexagonal API
 
 Este projeto é uma aplicação de exemplo para estudo e demonstração da **Arquitetura Hexagonal** (também conhecida como Ports and Adapters), desenvolvida com **Java 21**, **Spring Boot 3.5**, **PostgreSQL**, **Docker** e **Swagger**.
 
