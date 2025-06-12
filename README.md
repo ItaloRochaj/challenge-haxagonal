@@ -25,3 +25,9 @@ A Arquitetura Hexagonal tem como objetivo central **desacoplar a lógica de neg�
 
 ## 🧱 Estrutura de Pastas
 
+```
+arqui_hexagonal_spring/ ├── core/ │ ├── domain/ # Entidades puras do negócio (Cliente, Pedido) │ ├── ports/ # Interfaces de entrada e saída │ └── services/ # Regras de negócio implementadas │ ├── adapters/ │ ├── inbound/ # Entrada do sistema (Controllers, DTOs) │ └── outbound/ # Saída do sistema (repositórios JPA, entidades DB) │ ├── adapters/ # Implementações dos repositórios de domínio │ ├── entities/ # Entidades JPA │ └── repositories/ # Interfaces JpaRepository │ ├── config/ # Configurações gerais (ex: Swagger) └── ArquiHexagonalSpringApplication.java
+```
+
+## 🧠 Regras de Negócio
+
