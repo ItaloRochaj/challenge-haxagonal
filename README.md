@@ -24,7 +24,7 @@ A Arquitetura Hexagonal tem como objetivo central **desacoplar a lógica de neg�
 
 ---
 
-## 🧱 Estrutura de Pastas
+### 🧱 Estrutura de Pastas
 
 ```
 
@@ -105,7 +105,7 @@ arqui\_hexagonal\_spring/
 
 ## 📄 Endpoints da API
 
-### 📁 Clientes
+#### 📁 Clientes
 
 - `POST /clientes` – Criar cliente  
   ```json
@@ -113,13 +113,12 @@ arqui\_hexagonal\_spring/
     "nome": "Italo Rocha",
     "email": "italo@company.com"
   }
-````
+    
+    ````
 
-* `DELETE /clientes/{id}` – Remover cliente
+ 📁 Pedidos
 
-### 📁 Pedidos
-
-* `POST /pedidos` – Criar pedido
+ `POST /pedidos` – Criar pedido
 
   ```json
   {
@@ -127,7 +126,7 @@ arqui\_hexagonal\_spring/
     "data": "2025-06-10",
     "clienteId": 1
   }
-  ```
+  ````
 
 * `GET /pedidos` – Listar pedidos
 
@@ -141,7 +140,7 @@ arqui\_hexagonal\_spring/
     "data": "2025-06-11",
     "clienteId": 1
   }
-  ```
+  ````
 
 * `DELETE /pedidos/{id}` – Remover pedido
 
@@ -235,5 +234,3 @@ Com sua estrutura, ele está pronto para evoluir com segurança para contextos m
 ## 👨‍💻 Autor
 
 Desenvolvido por **Ítalo Rocha**
-
-
