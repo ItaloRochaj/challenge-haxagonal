@@ -1,0 +1,48 @@
+version: "3.8"
+
+services:
+  postgres_hexagonal:
+    image: postgres:15
+    container_name: postgres_hexagonal
+    restart: always
+    environment:
+      POSTGRES_DB: challenge_hexa
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5433:5432"
+    volumes:
+      - pgdata_hexa:/var/lib/postgresql/data
+    networks:
+      - hexagonal_net
+
+  pgadmin_hexagonal:
+    image: dpage/pgadmin4
+    container_name: pgadmin_hexagonal
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: italo@outlook.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "5051:80"
+    depends_on:
+      - postgres_hexagonal
+    networks:
+      - hexagonal_net
+
+  hexagonal_app:
+    build: .
+    container_name: hexagonal_app
+    ports:
+      - "8082:8082"
+    depends_on:
+      - postgres_hexagonal
+    networks:
+      - hexagonal_net
+
+volumes:
+  pgdata_hexa:
+
+networks:
+  hexagonal_net:
+    driver: bridge
